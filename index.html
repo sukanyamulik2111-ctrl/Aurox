@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Predictor 🌌</title>
+    <meta name="description"
+        content="Click anywhere on the world map to predict the chances of seeing the Northern Lights (Aurora Borealis) based on latitude.">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 🌌 Ambient Effects (above map, pointer-events: none) -->
+    <div class="sky"></div>
+    <div class="aurora" id="aurora"></div>
+
+    <!-- 🗺️ Interactive Map (full-screen) -->
+    <div id="map"></div>
+
+    <!-- 🪐 Info Panel (compact, bottom) -->
+    <div class="container">
+        <h1>Aurora Predictor</h1>
+        <p class="subtitle">Click anywhere on the map to predict aurora chances.</p>
+        <p class="hint">Higher latitude = better Northern Lights chances.</p>
+        <p id="result"></p>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
